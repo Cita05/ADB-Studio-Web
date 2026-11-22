@@ -1,0 +1,29 @@
+{
+  "name": "adb-studio-web",
+  "private": true,
+  "version": "1.6.0",
+  "type": "module",
+  "description": "ADB Studio - Chrome/Edge MV3 extension (vanilla ES modules) for Android device management over WebUSB",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite",
+    "check": "node scripts/check-modules.mjs",
+    "test": "node test/run-tests.js",
+    "build": "node scripts/check-modules.mjs && vite build",
+    "preview": "vite preview",
+    "bridge": "node bridge/adb-ws-bridge.mjs --port 7331"
+  },
+  "dependencies": {
+    "@yume-chan/adb": "3.0.0-beta.5",
+    "@yume-chan/adb-credential-web": "3.0.0-beta.5",
+    "@yume-chan/adb-daemon-webusb": "3.0.0-beta.5",
+    "@yume-chan/adb-scrcpy": "3.0.0-beta.5",
+    "@yume-chan/scrcpy": "3.0.0-beta.5",
+    "@yume-chan/stream-extra": "3.0.0-beta.5"
+  },
+  "devDependencies": {
+    "vite": "^7.3.8"
+  }
+}
